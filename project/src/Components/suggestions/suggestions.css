@@ -1,0 +1,38 @@
+.inputDiv {
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+input {
+    width: 8rem;
+    border: 0;
+    background: none;
+    border: 0.05rem solid #ff7eee;
+    padding: 0.5rem 0.5rem;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5rem;
+    transition: 0.25s;
+}
+
+input:focus {
+    width: 20rem;
+}
+
+button {
+    width: 8rem;
+    border: 0;
+    background: none;
+    border: 0.05rem solid #ffc4d6;
+    padding: 0.5rem 2rem;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5rem;
+    transition: 0.25s;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff7eee;
+}
