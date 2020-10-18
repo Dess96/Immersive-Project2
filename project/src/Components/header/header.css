@@ -51,3 +51,7 @@ ul {
     cursor: pointer;
     color: #ffffff;
 }
+
+a {
+    text-decoration: none;
+}
