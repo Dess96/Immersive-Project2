@@ -1,11 +1,14 @@
 import React, {useState} from "react";
-import "./suggestions.css";
+import GetSimilar from '../../Hooks/getSimilar';
+import "./search.css";
 
 import {
-  useHistory
+  useHistory,
+  useParams
 } from "react-router-dom";
 
-const Pictures = () => {
+const Search = () => {
+  let {search} = useParams();
   const history = useHistory();
   const [inp, setInp] = useState('');
 
@@ -14,7 +17,7 @@ const Pictures = () => {
     }
 
     const changeURL = (inp) => {
-        history.push(`/suggestions/${inp}`);
+        history.push(`/search/${inp}`);
     }
 
   return (
@@ -31,4 +34,4 @@ const Pictures = () => {
   );
 };
 
-export default Pictures;
+export default Search;

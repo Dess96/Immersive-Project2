@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import Home from '../home/home';
-import Suggestions from '../suggestions/suggestions';
+import Search from '../search/search';
 
 import {
     BrowserRouter as Router,
@@ -22,7 +22,7 @@ const Header = () => {
                         </li>
                         <li className="navItem">
                             <i className="fas fa-meteor"></i>
-                            <Link to="/suggestions"><span className="navText">Suggestions</span></Link>
+                            <Link to="/search/:search"><span className="navText">Suggestions</span></Link>
                         </li>
                         <li className="navItem">
                             <i className="fas fa-rocket"></i>
@@ -36,8 +36,8 @@ const Header = () => {
                 </nav>
 
                 <Switch>
-                    <Route path="/suggestions">
-                        <Suggestions />
+                    <Route path="/search/:search">
+                        <Search />
                     </Route>
                     <Route path="/signin">
                         
