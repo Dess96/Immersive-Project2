@@ -17,6 +17,10 @@
     width: 10rem;
 }
 
+.cardDiv:hover {
+    cursor: pointer;
+}
+
 .cardTitle {
     font-size: 1.5rem;
 }

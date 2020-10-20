@@ -2,6 +2,7 @@ import React from 'react';
 import './header.css';
 import Home from '../home/home';
 import Search from '../search/search';
+import Collection from '../collection/collection';
 
 import {
     BrowserRouter as Router,
@@ -22,11 +23,11 @@ const Header = () => {
                         </li>
                         <li className="navItem">
                             <i className="fas fa-meteor"></i>
-                            <Link to="/search/:search"><span className="navText">Suggestions</span></Link>
+                            <Link to="/search/:search"><span className="navText">Search</span></Link>
                         </li>
                         <li className="navItem">
                             <i className="fas fa-rocket"></i>
-                            <Link to="/signin"><span className="navText">Sign In</span></Link>
+                            <Link to="/collections"><span className="navText">Collections</span></Link>
                         </li>
                         <li className="navItem">
                             <i className="fas fa-moon"></i>
@@ -39,8 +40,8 @@ const Header = () => {
                     <Route path="/search/:search">
                         <Search />
                     </Route>
-                    <Route path="/signin">
-                        
+                    <Route path="/collections">
+                        <Collection />
                     </Route>
                     <Route path="/logout">
                         
