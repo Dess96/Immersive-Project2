@@ -1,4 +1,22 @@
+.contentDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .cardDiv {
-    background-color: #000000;
+    background-color: #191919;
     color:darkgray;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem 1rem 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-content: center;
+    text-align: center;
+    width: 10rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
 }

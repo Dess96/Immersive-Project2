@@ -36,3 +36,7 @@ button {
 button:hover {
     background-color: #ff7eee;
 }
+
+.contenDiv {
+    display: flex;
+}

@@ -35,11 +35,9 @@ const Search = () => {
       </div>
       {sim ? (
         <div className="contentDiv">
-          <ul>
-            {sim.map((item) => (
-              <Card name={item.Name} type={item.Type} />
-            ))}
-          </ul>
+            {
+              sim.map((item) => (<Card name={item.Name} type={item.Type} />))
+            }
         </div>
       ) : (
         <div></div>
