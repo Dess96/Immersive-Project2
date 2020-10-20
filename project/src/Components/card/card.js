@@ -4,19 +4,19 @@ import "./card.css";
 const getImage = (type) => {
     switch (type) {
         case "music":
-          return 'music';
+          return <i className="fas fa-music"></i>;
         case "movie":
-            return 'movie';
+            return <i className="fas fa-film"></i>;
         case "show":
-            return 'show';
+            return <i className="fas fa-tv"></i>;
         case "podcast":
-            return 'podcast';
+            return <i className="fas fa-headphones-alt"></i>;
         case "book":
-            return 'book';
+            return <i className="fas fa-book"></i>;
         case "author":
-            return 'author';
+            return <i className="fas fa-address-book"></i>;
         case "game":
-            return 'game';
+            return <i className="fas fa-gamepad"></i>;
       }
 };
 
