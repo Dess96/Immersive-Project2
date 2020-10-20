@@ -54,3 +54,7 @@ button:hover {
     align-self: flex-end;
     margin-top: 6rem;
 }
+
+.fa-exclamation-triangle {
+    padding: 0;
+}

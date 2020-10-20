@@ -1,6 +1,8 @@
 import React from "react";
 import "./card.css";
 
+let arr = [];
+
 const getImage = (type) => {
   switch (type) {
     case "music":
@@ -18,14 +20,18 @@ const getImage = (type) => {
   }
 };
 
+const saveLocal = (name) => {
+  arr.push(name);
+  var str = JSON.stringify(arr);
+  localStorage.setItem('music', str);
+}
+
 const Card = ({ name, type }) => {
   return (
-    <div className="contentDiv">
-      <div className="cardDiv">
+      <div className="cardDiv" onClick={() => saveLocal(name)}>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>
       </div>
-    </div>
   );
 };
 
