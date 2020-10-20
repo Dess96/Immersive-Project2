@@ -1,13 +1,15 @@
 import {useState, useEffect} from 'react';
 
 const GetSimilar = (search) => {
-    const [sug, setSug] = useState([]);
+    const [sug, setSug] = useState([{Name: '', Type: ''}]);
 
     useEffect(() => {
-        fetch(`https://tastedive.com/api/similar?q=red+hot+chili+peppers%2C+pulp+fiction`)
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const url = `https://tastedive.com/api/similar?q=${search}&k=388580-MusicPla-7JAJIVRN`;
+        fetch(proxyurl + url)
         .then(resp => resp.json())
         .then(res => {
-            setSug(res.Similar);
+            setSug(res.Similar.Results);
         }).catch(ex => {
             console.error(ex);
         })

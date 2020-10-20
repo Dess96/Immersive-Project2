@@ -11,7 +11,9 @@ const Search = () => {
   let {search} = useParams();
   const history = useHistory();
   const [inp, setInp] = useState('');
-
+  const sim = GetSimilar(search);
+  console.log(sim);
+  
     const updateData = (event) => {
         setInp(event.target.value)
     }
@@ -30,6 +32,17 @@ const Search = () => {
         <input type='text' placeholder='Bands, movies, podcasts...' onKeyDown={updateData}/>
         <button onClick={() => changeURL(inp)}>Search!</button>
       </div>
+      {
+        sim ?
+        <div className="contentDiv">
+        <ul>
+              {
+                  sim.map((item => <li>{item.Name}</li>))
+              }
+              </ul>
+        </div>
+        : <div></div>
+      }
     </div>
   );
 };
