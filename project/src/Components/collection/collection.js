@@ -1,7 +1,7 @@
 import React from "react";
 import "./collection.css";
 
-const Collection = ({ name, type }) => {
+const Collection = () => {
   return (
     <div className="content">
       <div className="title">

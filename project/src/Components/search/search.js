@@ -10,6 +10,7 @@ const Search = () => {
   const history = useHistory();
   const [inp, setInp] = useState("");
   const sim = GetSimilar(search);
+  console.log(sim);
 
   const updateData = (event) => {
     setInp(event.target.value);
@@ -35,9 +36,17 @@ const Search = () => {
       </div>
       {sim ? (
         <div className="contentDiv">
-            {
-              sim.map((item) => (<Card name={item.Name} type={item.Type} />))
-            }
+          {sim.length !== 0 ? (
+            sim.map((item) => <Card name={item.Name} type={item.Type} />)
+          ) : (
+            <div className="errorDiv">
+              <span className="errTitle">Oh no!</span>
+              <p>
+                That search did not return any results. Try something else.
+              </p>
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+          )}
         </div>
       ) : (
         <div></div>

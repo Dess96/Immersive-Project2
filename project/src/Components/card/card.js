@@ -9,8 +9,6 @@ const getImage = (type) => {
       return <i className="fas fasCard fa-film"></i>;
     case "show":
       return <i className="fas fasCard fa-tv"></i>;
-    case "podcast":
-      return <i className="fas fasCard fa-headphones-alt"></i>;
     case "book":
       return <i className="fas fasCard fa-book"></i>;
     case "author":

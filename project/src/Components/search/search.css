@@ -40,3 +40,17 @@ button:hover {
 .contenDiv {
     display: flex;
 }
+
+.errTitle {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.errorDiv {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-top: 6rem;
+}
