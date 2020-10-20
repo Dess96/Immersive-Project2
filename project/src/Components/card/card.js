@@ -20,15 +20,15 @@ const getImage = (type) => {
   }
 };
 
-const saveLocal = (name) => {
-  arr.push(name);
+const saveLocal = (name, desc) => {
+  arr.push({name: name, description: desc});
   var str = JSON.stringify(arr);
   localStorage.setItem('music', str);
 }
 
-const Card = ({ name, type }) => {
+const Card = ({ name, type, desc }) => {
   return (
-      <div className="cardDiv" onClick={() => saveLocal(name)}>
+      <div className="cardDiv" onClick={() => saveLocal(name, desc)}>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>
       </div>
