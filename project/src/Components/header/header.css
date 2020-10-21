@@ -5,11 +5,14 @@ nav {
     background-color: #191919;
 }
 
-.fas {
-    font-size: 3rem;
+.pad {
     padding: 1.5rem 1rem;
+}
+
+.fas {
     color: #ff7eee;
     transition: 1s;
+    font-size: 3rem;
 }
 
 ul {

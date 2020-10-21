@@ -10,17 +10,32 @@
     display: flex;
     flex-direction: column;
     margin: 2rem 1rem 1rem 1rem;
-    padding: 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     border-radius: 1rem;
     align-content: center;
     text-align: center;
     width: 10rem;
 }
 
-.cardDiv:hover {
+.cardTitle {
+    font-size: 1.5rem;
+}
+ 
+
+.savedDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa-bookmark {
+    font-size: 1.5rem;
+    color: #d3c2c7;
+}
+
+.fa-bookmark:hover {
     cursor: pointer;
 }
 
-.cardTitle {
-    font-size: 1.5rem;
+.pad {
+    padding-top: 0.5rem;
 }

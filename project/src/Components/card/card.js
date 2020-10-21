@@ -11,50 +11,60 @@ let arrS = [];
 const getImage = (type) => {
   switch (type) {
     case "music":
-      return <i className="fas fasCard fa-music"></i>;
+      return <i className="fas pad fasCard fa-music"></i>;
     case "movie":
-      return <i className="fas fasCard fa-film"></i>;
+      return <i className="fas pad fasCard fa-film"></i>;
     case "show":
-      return <i className="fas fasCard fa-tv"></i>;
+      return <i className="fas pad fasCard fa-tv"></i>;
     case "book":
-      return <i className="fas fasCard fa-book"></i>;
+      return <i className="fas pad fasCard fa-book"></i>;
     case "author":
-      return <i className="fas fasCard fa-address-book"></i>;
+      return <i className="fas pad fasCard fa-address-book"></i>;
     case "game":
-      return <i className="fas fasCard fa-gamepad"></i>;
+      return <i className="fas pad fasCard fa-gamepad"></i>;
     default:
-      return <i className="fas fa-question"></i>;
+      return <i className="fas pad fa-question"></i>;
   }
 };
 
-const saveLocal = (name, desc, type) => {
+const changeIcon = (id) => {
+  const icon = document.getElementById(id);
+  icon.classList.add('fas');
+  icon.classList.remove('far');
+}
+
+const saveLocal = (name, desc, type, id) => {
+  changeIcon(id);
   switch (type) {
     case "music":
-      SetLocal(arrM, name, desc, type);
+      SetLocal(arrM, name, desc, type, id);
       break;
     case "movie":
-      SetLocal(arrMo, name, desc, type);
+      SetLocal(arrMo, name, desc, type, id);
       break;
     case "show":
-      SetLocal(arrS, name, desc, type);
+      SetLocal(arrS, name, desc, type, id);
       break;
     case "book":
-      SetLocal(arrB, name, desc, type);
+      SetLocal(arrB, name, desc, type, id);
       break;
     case "author":
-      SetLocal(arrA, name, desc, type);
+      SetLocal(arrA, name, desc, type, id);
       break;
     case "game":
-      SetLocal(arrG, name, desc, type);
+      SetLocal(arrG, name, desc, type, id);
       break;
     default:
       break;
   }
 }
 
-const Card = ({ name, type, desc }) => {
+const Card = ({ name, type, desc, id }) => {
   return (
-      <div className="cardDiv" onClick={() => saveLocal(name, desc, type)}>
+      <div className="cardDiv">
+        <div className="savedDiv">
+         <i className="far fa-bookmark" id={id} onClick={() => saveLocal(name, desc, type, id)}></i>
+        </div>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>
       </div>

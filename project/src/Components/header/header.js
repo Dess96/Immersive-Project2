@@ -18,19 +18,19 @@ const Header = () => {
                 <nav className="navbar">
                     <ul>
                         <li className="navItem">
-                            <i className="fas fa-user-astronaut"></i>
+                            <i className="fas pad fa-user-astronaut"></i>
                             <Link to="/"><span className="navText">Home</span></Link>
                         </li>
                         <li className="navItem">
-                            <i className="fas fa-meteor"></i>
+                            <i className="fas pad fa-meteor"></i>
                             <Link to="/search/:search"><span className="navText">Search</span></Link>
                         </li>
                         <li className="navItem">
-                            <i className="fas fa-rocket"></i>
+                            <i className="fas pad fa-rocket"></i>
                             <Link to="/collections"><span className="navText">Collections</span></Link>
                         </li>
                         <li className="navItem">
-                            <i className="fas fa-moon"></i>
+                            <i className="fas pad fa-moon"></i>
                             <Link to="/logout"><span className="navText">Logout</span></Link>
                         </li>
                     </ul>

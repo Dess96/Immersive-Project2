@@ -1,7 +1,7 @@
 import React from "react";
 import "./collection.css";
 import List from "../list/list";
-import CollError from "../collError/collError";
+import Text from "../text/text";
 
 const getLocal = (colName) => {
   const musicCollection = JSON.parse(localStorage.getItem(colName));
@@ -26,49 +26,42 @@ const Collection = () => {
           <h3>Music</h3>
           {
             ((music = getLocal("music")),
-            music !== null ? (
-              <div>
-                <List collection={music} />
-                <span>More</span>
-              </div>
-            ) : (
-              <CollError />
-            ))
+            music !== null ? <div><List collection={music} /> <span>More</span> </div> :  <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Movies</h3>
           {
             ((movies = getLocal("movie")),
-            movies !== null ? <List collection={movies} /> : <CollError />)
+            movies !== null ? <div><List collection={movies} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Shows</h3>
           {
             ((shows = getLocal("show")),
-            shows !== null ? <List collection={shows} /> : <CollError />)
+            shows !== null ? <div><List collection={shows} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Books</h3>
           {
             ((books = getLocal("book")),
-            books !== null ? <List collection={books} /> : <CollError />)
+            books !== null ? <div><List collection={books} /> <span>More</span> </div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Authors</h3>
           {
             ((authors = getLocal("author")),
-            authors !== null ? <List collection={authors} /> : <CollError />)
+            authors !== null ? <div><List collection={authors} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Games</h3>
           {
             ((games = getLocal("game")),
-            games !== null ? <List collection={games} /> : <CollError />)
+            games !== null ? <div><List collection={games} /><span>More</span></div> : <Text text={'This collection is empty :('}/>)
           }
         </div>
       </div>
