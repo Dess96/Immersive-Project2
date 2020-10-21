@@ -4,12 +4,12 @@ import SetLocal from '../../Helper/setLocal';
 import GetLocal from '../../Helper/getLocal';
 import IconChanger from '../../Helper/iconChanger';
 
-let arrM = GetLocal('music') !== null ? GetLocal('music') : [];
-let arrMo = GetLocal('movies') !== null ? GetLocal('movies') : [];
-let arrG = GetLocal('games') !== null ? GetLocal('games') : [];
-let arrA = GetLocal('authors') !== null ? GetLocal('authors') : [];
-let arrB = GetLocal('books') !== null ? GetLocal('books') : [];
-let arrS = GetLocal('shows') !== null ? GetLocal('shows') : [];
+let arrM = [];
+let arrMo = [];
+let arrG = [];
+let arrA = [];
+let arrB = [];
+let arrS = [];
 
 const getImage = (type) => {
   switch (type) {
@@ -56,11 +56,26 @@ const saveLocal = (name, desc, type, id) => {
   }
 }
 
+const addDelete = (name, desc, type, id) => {
+  const icon = document.getElementById(id);
+  if(icon.className.includes('far')) {
+    icon.classList.add('fas');
+    icon.classList.remove('far');
+    saveLocal(name, desc, type, id);
+  } else {
+    const coll = GetLocal(type);
+    icon.classList.add('far');
+    icon.classList.remove('fas');
+    arrM = coll.filter(item => !(item.id.includes(id)));
+    localStorage.setItem('music', JSON.stringify(arrM));
+  }
+}
+
 const Card = ({ name, type, desc, id }) => {
   return (
       <div className="cardDiv">
         <div className="savedDiv">
-         <i className="far fa-bookmark" id={id} onClick={() => saveLocal(name, desc, type, id)}></i>
+         <i className="far fa-bookmark" id={id} onClick={() => addDelete(name, desc, type, id)}></i>
         </div>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>
