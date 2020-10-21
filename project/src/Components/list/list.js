@@ -5,7 +5,7 @@ const List = ({collection}) => {
   return (
     <ul>
       {
-      collection.map((element) => (
+      collection.slice(0, 5).map((element) => (
         <li>{element.name}</li>
       ))
       }
