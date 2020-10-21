@@ -4,12 +4,12 @@ import SetLocal from '../../Helper/setLocal';
 import GetLocal from '../../Helper/getLocal';
 import IconChanger from '../../Helper/iconChanger';
 
-let arrM = [];
-let arrMo = [];
-let arrG = [];
-let arrA = [];
-let arrB = [];
-let arrS = [];
+let arrM = GetLocal('music') !== null ? GetLocal('music') : [];
+let arrMo = GetLocal('movie') !== null ? GetLocal('movie') : [];
+let arrG = GetLocal('game') !== null ? GetLocal('game') : [];
+let arrA = GetLocal('author') !== null ? GetLocal('author') : [];
+let arrB = GetLocal('book') !== null ? GetLocal('book') : [];
+let arrS = GetLocal('show') !== null ? GetLocal('show') : [];
 
 const getImage = (type) => {
   switch (type) {
@@ -26,34 +26,33 @@ const getImage = (type) => {
     case "game":
       return <i className="fas pad fasCard fa-gamepad"></i>;
     default:
-      return <i className="fas pad fa-question"></i>;
+      return;
   }
 };
 
-const saveLocal = (name, desc, type, id) => {
-  IconChanger(id);
+const getArray = (type) => {
   switch (type) {
     case "music":
-      SetLocal(arrM, name, desc, type, id);
-      break;
+      return arrM;
     case "movie":
-      SetLocal(arrMo, name, desc, type, id);
-      break;
+      return arrMo;
     case "show":
-      SetLocal(arrS, name, desc, type, id);
-      break;
+      return arrS;
     case "book":
-      SetLocal(arrB, name, desc, type, id);
-      break;
+      return arrB;
     case "author":
-      SetLocal(arrA, name, desc, type, id);
-      break;
+      return arrA;
     case "game":
-      SetLocal(arrG, name, desc, type, id);
-      break;
+      return arrG;
     default:
       break;
   }
+}
+
+const saveLocal = (name, desc, type, id) => {
+  IconChanger(id);
+  let arr = getArray(type);
+  SetLocal(arr, name, desc, type, id);
 }
 
 const addDelete = (name, desc, type, id) => {
