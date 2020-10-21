@@ -1,7 +1,12 @@
 import React from "react";
 import "./card.css";
-
-let arr = [];
+import SetLocal from '../../Helper/setLocal';
+let arrM = [];
+let arrMo = [];
+let arrG = [];
+let arrA = [];
+let arrB = [];
+let arrS = [];
 
 const getImage = (type) => {
   switch (type) {
@@ -17,18 +22,39 @@ const getImage = (type) => {
       return <i className="fas fasCard fa-address-book"></i>;
     case "game":
       return <i className="fas fasCard fa-gamepad"></i>;
+    default:
+      return <i className="fas fa-question"></i>;
   }
 };
 
-const saveLocal = (name, desc) => {
-  arr.push({name: name, description: desc});
-  var str = JSON.stringify(arr);
-  localStorage.setItem('music', str);
+const saveLocal = (name, desc, type) => {
+  switch (type) {
+    case "music":
+      SetLocal(arrM, name, desc, type);
+      break;
+    case "movie":
+      SetLocal(arrMo, name, desc, type);
+      break;
+    case "show":
+      SetLocal(arrS, name, desc, type);
+      break;
+    case "book":
+      SetLocal(arrB, name, desc, type);
+      break;
+    case "author":
+      SetLocal(arrA, name, desc, type);
+      break;
+    case "game":
+      SetLocal(arrG, name, desc, type);
+      break;
+    default:
+      break;
+  }
 }
 
 const Card = ({ name, type, desc }) => {
   return (
-      <div className="cardDiv" onClick={() => saveLocal(name, desc)}>
+      <div className="cardDiv" onClick={() => saveLocal(name, desc, type)}>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>
       </div>
