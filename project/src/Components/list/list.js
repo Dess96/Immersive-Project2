@@ -6,7 +6,7 @@ const List = ({collection}) => {
     <ul>
       {
       collection.slice(0, 5).map((element) => (
-        <li>{element.name}</li>
+        <li key={element.yID}>{element.name}</li>
       ))
       }
     </ul>

@@ -2,11 +2,7 @@ import React from "react";
 import "./collection.css";
 import List from "../list/list";
 import Text from "../text/text";
-
-const getLocal = (colName) => {
-  const musicCollection = JSON.parse(localStorage.getItem(colName));
-  return musicCollection;
-};
+import GetLocal from '../../Helper/getLocal';
 
 const Collection = () => {
   let music,
@@ -25,42 +21,42 @@ const Collection = () => {
         <div className="cardDiv colls">
           <h3>Music</h3>
           {
-            ((music = getLocal("music")),
+            ((music = GetLocal("music")),
             music !== null ? <div><List collection={music} /> <span>More</span> </div> :  <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Movies</h3>
           {
-            ((movies = getLocal("movie")),
+            ((movies = GetLocal("movie")),
             movies !== null ? <div><List collection={movies} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Shows</h3>
           {
-            ((shows = getLocal("show")),
+            ((shows = GetLocal("show")),
             shows !== null ? <div><List collection={shows} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Books</h3>
           {
-            ((books = getLocal("book")),
+            ((books = GetLocal("book")),
             books !== null ? <div><List collection={books} /> <span>More</span> </div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Authors</h3>
           {
-            ((authors = getLocal("author")),
+            ((authors = GetLocal("author")),
             authors !== null ? <div><List collection={authors} /> <span>More</span></div>: <Text text={'This collection is empty :('}/>)
           }
         </div>
         <div className="cardDiv colls">
           <h3>Games</h3>
           {
-            ((games = getLocal("game")),
+            ((games = GetLocal("game")),
             games !== null ? <div><List collection={games} /><span>More</span></div> : <Text text={'This collection is empty :('}/>)
           }
         </div>
