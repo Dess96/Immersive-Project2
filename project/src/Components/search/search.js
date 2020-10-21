@@ -9,7 +9,7 @@ const Search = () => {
   let { search } = useParams();
   const history = useHistory();
   const [inp, setInp] = useState("");
-  var sim = GetSimilar(search);
+  let sim = GetSimilar(search);
 
   const updateData = (event) => {
     setInp(event.target.value);
