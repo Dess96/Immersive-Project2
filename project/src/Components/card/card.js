@@ -1,12 +1,15 @@
 import React from "react";
 import "./card.css";
 import SetLocal from '../../Helper/setLocal';
-let arrM = [];
-let arrMo = [];
-let arrG = [];
-let arrA = [];
-let arrB = [];
-let arrS = [];
+import GetLocal from '../../Helper/getLocal';
+import IconChanger from '../../Helper/iconChanger';
+
+let arrM = GetLocal('music') !== null ? GetLocal('music') : [];
+let arrMo = GetLocal('movies') !== null ? GetLocal('movies') : [];
+let arrG = GetLocal('games') !== null ? GetLocal('games') : [];
+let arrA = GetLocal('authors') !== null ? GetLocal('authors') : [];
+let arrB = GetLocal('books') !== null ? GetLocal('books') : [];
+let arrS = GetLocal('shows') !== null ? GetLocal('shows') : [];
 
 const getImage = (type) => {
   switch (type) {
@@ -27,14 +30,8 @@ const getImage = (type) => {
   }
 };
 
-const changeIcon = (id) => {
-  const icon = document.getElementById(id);
-  icon.classList.add('fas');
-  icon.classList.remove('far');
-}
-
 const saveLocal = (name, desc, type, id) => {
-  changeIcon(id);
+  IconChanger(id);
   switch (type) {
     case "music":
       SetLocal(arrM, name, desc, type, id);
