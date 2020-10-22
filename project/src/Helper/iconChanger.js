@@ -1,4 +1,4 @@
-const IconChanger = (id, classN) => {
+const IconChanger = (id) => {
   const icon = document.getElementById(id);
   if (icon.className.includes('far')) {
     icon.classList.add("fas");

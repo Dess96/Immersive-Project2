@@ -11,7 +11,6 @@ const Collection = () => {
   let music,
     movies,
     books,
-    authors,
     shows,
     games = null;
 
@@ -80,19 +79,6 @@ const Collection = () => {
             (books !== null && books.length !== 0) ? (
               <div>
                 <List collection={books} /> <span>More</span>{" "}
-              </div>
-            ) : (
-              <Text text={emptyText} />
-            ))
-          }
-        </div>
-        <div className="cardDiv colls">
-          <h3>Authors</h3>
-          {
-            ((authors = GetLocal("author")),
-            (authors !== null && authors.length !== 0) ? (
-              <div>
-                <List collection={authors} /> <span>More</span>
               </div>
             ) : (
               <Text text={emptyText} />
