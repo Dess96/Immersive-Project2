@@ -35,11 +35,18 @@ const Search = () => {
       </div>
       {sim ? (
         <div className="contentDiv">
-            {
-            sim.map((item) => item.type !== 'unknown' ?
-            <Card name={item.Name} type={item.Type} desc={item.wTeaser} id={item.yID}/>
-            : <div></div>)
-            } 
+          {sim.map((item) =>
+            item.Type !== "" ? (
+              <Card
+                name={item.Name}
+                type={item.Type}
+                desc={item.wTeaser}
+                id={item.yID}
+              />
+            ) : (
+              <div></div>
+            )
+          )}
         </div>
       ) : (
         <div></div>

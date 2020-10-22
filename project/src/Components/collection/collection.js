@@ -5,6 +5,7 @@ import Text from "../text/text";
 import GetLocal from "../../Helper/getLocal";
 
 import { useHistory, useParams } from "react-router-dom";
+const emptyText = 'This collection is empty :(';
 
 const Collection = () => {
   let music,
@@ -42,7 +43,7 @@ const Collection = () => {
                 <span onClick={() => deleteCollection('music')}>Delete</span>
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
@@ -55,7 +56,7 @@ const Collection = () => {
                 <List collection={movies} /> <span>More</span>
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
@@ -68,7 +69,7 @@ const Collection = () => {
                 <List collection={shows} /> <span>More</span>
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
@@ -81,7 +82,7 @@ const Collection = () => {
                 <List collection={books} /> <span>More</span>{" "}
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
@@ -94,7 +95,7 @@ const Collection = () => {
                 <List collection={authors} /> <span>More</span>
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
@@ -108,7 +109,7 @@ const Collection = () => {
                 <span>More</span>
               </div>
             ) : (
-              <Text text={"This collection is empty :("} />
+              <Text text={emptyText} />
             ))
           }
         </div>
