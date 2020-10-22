@@ -4,6 +4,10 @@ import Home from "../home/home";
 import Search from "../search/search";
 import Collection from "../collection/collection";
 import Music from "../../Pages/music/music";
+import Movie from '../../Pages/movie/movie';
+import Game from '../../Pages/game/game';
+import Show from '../../Pages/show/show';
+import Book from '../../Pages/book/book';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -43,6 +47,18 @@ const Header = () => {
         <Switch>
           <Route path="/music">
             <Music />
+          </Route>
+          <Route path="/movie">
+            <Movie />
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+          <Route path="/show">
+            <Show />
+          </Route>
+          <Route path="/book">
+            <Book />
           </Route>
           <Route path="/search/:search">
             <Search />
