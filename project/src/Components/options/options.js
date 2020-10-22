@@ -17,7 +17,7 @@ const history = useHistory();
       };
 
   return (
-    <div>
+    <div className="optionsDiv">
       <List collection={collection} />
       <span onClick={() => changeURL(input)}>More</span>
       <span onClick={() => deleteCollection(input)}>Delete</span>
