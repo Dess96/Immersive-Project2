@@ -4,7 +4,7 @@ import List from "../list/list";
 import Text from "../text/text";
 import GetLocal from "../../Helper/getLocal";
 
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const emptyText = 'This collection is empty :(';
 
 const Collection = () => {
@@ -36,7 +36,8 @@ const Collection = () => {
           <h3>Music</h3>
           {
             ((music = GetLocal("music")),
-            music !== null ? (
+            console.log(music),
+            (music !== null && music.length !== 0) ? (
               <div>
                 <List collection={music} />
                 <span onClick={() => changeURL("music")}>More</span>
