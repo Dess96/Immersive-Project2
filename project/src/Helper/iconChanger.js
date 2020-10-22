@@ -1,6 +1,6 @@
 const IconChanger = (id, classN) => {
   const icon = document.getElementById(id);
-  if (classN === "far") {
+  if (icon.className.includes('far')) {
     icon.classList.add("fas");
     icon.classList.remove("far");
   } else {

@@ -59,6 +59,7 @@ const addDelete = (name, desc, type, id) => {
   const icon = document.getElementById(id);
   if(icon.className.includes('far')) {
     saveLocal(name, desc, type, id);
+    IconChanger(id, 'far');
   } else {
     const coll = GetLocal(type);
     arrM = coll.filter(item => !(item.id.includes(id)));
