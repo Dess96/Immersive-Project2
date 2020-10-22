@@ -36,7 +36,6 @@ const Collection = () => {
           <h3>Music</h3>
           {
             ((music = GetLocal("music")),
-            console.log(music),
             (music !== null && music.length !== 0) ? (
               <div>
                 <List collection={music} />
@@ -52,7 +51,7 @@ const Collection = () => {
           <h3>Movies</h3>
           {
             ((movies = GetLocal("movie")),
-            movies !== null ? (
+            (movies !== null && movies.length !== 0) ? (
               <div>
                 <List collection={movies} /> <span>More</span>
               </div>
@@ -65,7 +64,7 @@ const Collection = () => {
           <h3>Shows</h3>
           {
             ((shows = GetLocal("show")),
-            shows !== null ? (
+            (shows !== null && shows.length !== 0) ? (
               <div>
                 <List collection={shows} /> <span>More</span>
               </div>
@@ -78,7 +77,7 @@ const Collection = () => {
           <h3>Books</h3>
           {
             ((books = GetLocal("book")),
-            books !== null ? (
+            (books !== null && books.length !== 0) ? (
               <div>
                 <List collection={books} /> <span>More</span>{" "}
               </div>
@@ -91,7 +90,7 @@ const Collection = () => {
           <h3>Authors</h3>
           {
             ((authors = GetLocal("author")),
-            authors !== null ? (
+            (authors !== null && authors.length !== 0) ? (
               <div>
                 <List collection={authors} /> <span>More</span>
               </div>
@@ -104,7 +103,7 @@ const Collection = () => {
           <h3>Games</h3>
           {
             ((games = GetLocal("game")),
-            games !== null ? (
+            (games !== null && games.length !== 0) ? (
               <div>
                 <List collection={games} />
                 <span>More</span>

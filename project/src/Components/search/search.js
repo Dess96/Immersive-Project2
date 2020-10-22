@@ -28,7 +28,7 @@ const Search = () => {
       <div className="inputDiv">
         <input
           type="text"
-          placeholder="Bands, movies, podcasts..."
+          placeholder="Bands, movies, shows..."
           onKeyDown={updateData}
         />
         <button onClick={() => changeURL(inp)}>Search!</button>
