@@ -59,6 +59,13 @@ button:hover {
     padding: 0;
 }
 
+.loadingDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
 .lds-roller {
     display: inline-block;
     position: relative;
