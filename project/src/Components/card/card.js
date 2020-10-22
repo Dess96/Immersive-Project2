@@ -58,23 +58,25 @@ const saveLocal = (name, desc, type, id) => {
 const addDelete = (name, desc, type, id) => {
   const icon = document.getElementById(id);
   if(icon.className.includes('far')) {
-    icon.classList.add('fas');
-    icon.classList.remove('far');
     saveLocal(name, desc, type, id);
   } else {
     const coll = GetLocal(type);
-    icon.classList.add('far');
-    icon.classList.remove('fas');
     arrM = coll.filter(item => !(item.id.includes(id)));
     localStorage.setItem('music', JSON.stringify(arrM));
   }
+  IconChanger(id, icon.className);
 }
 
-const Card = ({ name, type, desc, id }) => {
+const Card = ({ name, type, desc, id, found }) => {
   return (
       <div className="cardDiv">
         <div className="savedDiv">
-         <i className="far fa-bookmark" id={id} onClick={() => addDelete(name, desc, type, id)}></i>
+          {
+            found ? 
+              <i className="fas fa-bookmark" id={id} onClick={() => addDelete(name, desc, type, id)}></i>
+            :
+            <i className="far fa-bookmark" id={id} onClick={() => addDelete(name, desc, type, id)}></i>
+          } 
         </div>
         <div className="logoDiv">{getImage(type)}</div>
         <span className="cardTitle">{name}</span>

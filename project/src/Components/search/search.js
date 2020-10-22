@@ -42,6 +42,7 @@ const Search = () => {
                 type={item.Type}
                 desc={item.wTeaser}
                 id={item.yID}
+                found={item.found}
               />
             ) : (
               <div></div>
