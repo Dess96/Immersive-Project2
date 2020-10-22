@@ -46,7 +46,7 @@ const Search = () => {
                 found={item.found}
               />
             ) : (
-              <div>Loading...</div>
+              <div class="lds-roller"><div></div><div></div><div></div><div></div></div>
             )
           )}
         </div>
