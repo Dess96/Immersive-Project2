@@ -6,9 +6,9 @@ const GetSimilar = (search) => {
   const [sug, setSug] = useState([{ Name: "", Type: "" }]);
 
   useEffect(() => {
-    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = `https://tastedive.com/api/similar?q=${search}&k=388580-MusicPla-7JAJIVRN&info=1`;
-    fetch(url)
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = `https://tastedive.com/api/similar?q=${search}&k=388580-MusicPla-G5IMSTL2&info=1`;
+    fetch(proxyurl + url)
       .then((resp) => resp.json())
       .then((res) => {
         //Verificar local Storage

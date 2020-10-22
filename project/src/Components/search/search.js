@@ -17,6 +17,7 @@ const Search = () => {
 
   const changeURL = (inp) => {
     history.push(`/search/${inp}`);
+    history.go(0);
   };
 
   return (
