@@ -2,19 +2,29 @@ import React from "react";
 import "./options.css";
 import List from "../list/list";
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Options = ({ collection, input }) => {
-    
-const history = useHistory();
+  const history = useHistory();
 
+  const changeURL = (inp) => {
+    history.push(`/${inp}`);
+  };
 
-    const changeURL = (inp) => {
-        history.push(`/${inp}`);
-      };
-    
-      const deleteCollection = (collection) => {
+  const deleteCollection = (collection) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You are about to delete the whole collection',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Ok'
+   }).then((result) => {
+      if(result.value){
         localStorage.removeItem(collection);
-      };
+        history.go(0);
+     }
+   })
+  };
 
   return (
     <div className="optionsDiv">
