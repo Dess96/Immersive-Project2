@@ -2,19 +2,31 @@ import React from "react";
 import "./information.css";
 import Description from "../../Components/description/description";
 import GetLocal from "../../Helper/getLocal";
+import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom";
 
-  
-const deleteItem = (coll, type, id) => {
-  console.log(coll, type, id);
-  let arr = [];
-  arr = coll.filter((item) => !item.id.includes(id));
-  localStorage.setItem(type, JSON.stringify(arr));
-};
-
-
-const Information = ({coll, title}) => {
+const Information = ({ coll, title }) => {
   let collection = GetLocal(coll);
-  console.log(collection);
+  const history = useHistory();
+
+  const deleteItem = (coll, type, id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You are about to delete this item from the collection",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Ok",
+      background: "#000",
+    }).then((result) => {
+      if (result.value) {
+        let arr = [];
+        arr = coll.filter((item) => !item.id.includes(id));
+        localStorage.setItem(type, JSON.stringify(arr));
+        history.go(0);
+      }
+    });
+  };
+  
   return (
     <div>
       <Description
@@ -26,7 +38,11 @@ const Information = ({coll, title}) => {
           <ul>
             {collection.map((item) => (
               <li className="descriptionLi">
-                {item.name} <span onClick={() => deleteItem(collection, coll, item.id)}>Delete item</span><br/>
+                {item.name}{" "}
+                <span onClick={() => deleteItem(collection, coll, item.id)}>
+                  Delete item
+                </span>
+                <br />
                 {item.description}
               </li>
             ))}

@@ -17,7 +17,8 @@ const Options = ({ collection, input }) => {
       text: 'You are about to delete the whole collection',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'Ok',
+      background: '#000'
    }).then((result) => {
       if(result.value){
         localStorage.removeItem(collection);
