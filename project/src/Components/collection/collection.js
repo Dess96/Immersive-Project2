@@ -10,7 +10,6 @@ const emptyText = 'This collection is empty :(';
 const Collection = () => {
   let music,
     movies,
-    books,
     shows,
     games = null;
 
@@ -49,17 +48,6 @@ const Collection = () => {
             ((shows = GetLocal("show")),
             (shows !== null && shows.length !== 0) ? (
               <Options collection={shows} input={'show'}/>
-            ) : (
-              <Text text={emptyText} />
-            ))
-          }
-        </div>
-        <div className="cardDiv colls">
-          <h3>Books</h3>
-          {
-            ((books = GetLocal("book")),
-            (books !== null && books.length !== 0) ? (
-              <Options collection={books} input={'book'}/>
             ) : (
               <Text text={emptyText} />
             ))

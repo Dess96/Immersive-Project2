@@ -7,7 +7,6 @@ import Music from "../../Pages/music/music";
 import Movie from '../../Pages/movie/movie';
 import Game from '../../Pages/game/game';
 import Show from '../../Pages/show/show';
-import Book from '../../Pages/book/book';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -56,9 +55,6 @@ const Header = () => {
           </Route>
           <Route path="/show">
             <Show />
-          </Route>
-          <Route path="/book">
-            <Book />
           </Route>
           <Route path="/search/:search">
             <Search />

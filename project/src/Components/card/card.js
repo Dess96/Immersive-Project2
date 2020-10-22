@@ -7,7 +7,6 @@ import IconChanger from "../../Helper/iconChanger";
 let arrM = GetLocal("music") !== null ? GetLocal("music") : [];
 let arrMo = GetLocal("movie") !== null ? GetLocal("movie") : [];
 let arrG = GetLocal("game") !== null ? GetLocal("game") : [];
-let arrB = GetLocal("book") !== null ? GetLocal("book") : [];
 let arrS = GetLocal("show") !== null ? GetLocal("show") : [];
 
 const getImage = (type) => {
@@ -18,8 +17,6 @@ const getImage = (type) => {
       return <i className="fas pad fasCard fa-film"></i>;
     case "show":
       return <i className="fas pad fasCard fa-tv"></i>;
-    case "book":
-      return <i className="fas pad fasCard fa-book"></i>;
     case "game":
       return <i className="fas pad fasCard fa-gamepad"></i>;
     default:
@@ -35,8 +32,6 @@ const getArray = (type) => {
       return arrMo;
     case "show":
       return arrS;
-    case "book":
-      return arrB;
     case "game":
       return arrG;
     default:
@@ -51,39 +46,36 @@ const saveLocal = (name, desc, type, id) => {
 
 const addDelete = (name, desc, type, id) => {
   const icon = document.getElementById(id);
-  console.log(icon.className);
-  if (icon.className.includes("far")) {
-    saveLocal(name, desc, type, id);
-  } else {
-    const coll = GetLocal(type);
-    if (coll !== null) {
-      switch (type) {
-        case "music":
-          arrM = coll.filter((item) => !item.id.includes(id));
-          localStorage.setItem(type, JSON.stringify(arrM));
-          break;
-        case "movie":
-          arrMo = coll.filter((item) => !item.id.includes(id));
-          localStorage.setItem(type, JSON.stringify(arrMo));
-          break;
-        case "book":
-          arrB = coll.filter((item) => !item.id.includes(id));
-          localStorage.setItem(type, JSON.stringify(arrB));
-          break;
-        case "game":
-          arrG = coll.filter((item) => !item.id.includes(id));
-          localStorage.setItem(type, JSON.stringify(arrG));
-          break;
-        case "show":
-          arrS = coll.filter((item) => !item.id.includes(id));
-          localStorage.setItem(type, JSON.stringify(arrS));
-          break;
-        default:
-          break;
+  if(icon !== null) {
+    if (icon.className.includes("far")) {
+      saveLocal(name, desc, type, id);
+    } else {
+      const coll = GetLocal(type);
+      if (coll !== null) {
+        switch (type) {
+          case "music":
+            arrM = coll.filter((item) => !item.id.includes(id));
+            localStorage.setItem(type, JSON.stringify(arrM));
+            break;
+          case "movie":
+            arrMo = coll.filter((item) => !item.id.includes(id));
+            localStorage.setItem(type, JSON.stringify(arrMo));
+            break;
+          case "game":
+            arrG = coll.filter((item) => !item.id.includes(id));
+            localStorage.setItem(type, JSON.stringify(arrG));
+            break;
+          case "show":
+            arrS = coll.filter((item) => !item.id.includes(id));
+            localStorage.setItem(type, JSON.stringify(arrS));
+            break;
+          default:
+            break;
+        }
       }
     }
+    IconChanger(id, icon.className);
   }
-  IconChanger(id, icon.className);
 };
 
 const Card = ({ name, type, desc, id, found }) => {
