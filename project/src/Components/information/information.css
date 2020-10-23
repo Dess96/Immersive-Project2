@@ -33,3 +33,36 @@ svg:hover {
     font-size: 1.3rem;
     margin-top: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .descriptionLi {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .svgDiv {
+        width: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .infoP {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
+    .swal-wide{
+        width:20rem !important;
+        text-align: center;
+    }
+
+    .swal-wide button {
+        width: 10rem !important;
+    }
+}

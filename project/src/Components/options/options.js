@@ -18,7 +18,8 @@ const Options = ({ collection, input }) => {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Ok',
-      background: '#000'
+      background: '#000',
+      customClass: 'swal-wide'
    }).then((result) => {
       if(result.value){
         localStorage.removeItem(collection);

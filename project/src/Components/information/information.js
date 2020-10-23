@@ -17,6 +17,7 @@ const Information = ({ coll, title }) => {
       showCancelButton: true,
       confirmButtonText: "Ok",
       background: "#000",
+      customClass: 'swal-wide'
     }).then((result) => {
       if (result.value) {
         let arr = [];
@@ -40,6 +41,7 @@ const Information = ({ coll, title }) => {
               <li className="descriptionLi">
                 <h3>
                   {item.name}
+                  </h3>
                   <div className="svgDiv">
                   <svg
                     version="1.1"
@@ -89,8 +91,7 @@ const Information = ({ coll, title }) => {
                     <g></g>
                   </svg>
                   </div>
-                </h3>
-                <p className="itDesc">{item.description}</p>
+                <p className="descP infoP">{item.description}</p>
               </li>
             ))}
           </ul>
