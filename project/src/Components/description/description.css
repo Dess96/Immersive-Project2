@@ -1,32 +1,32 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    margin-left: 10rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  margin-left: 10rem;
+  flex-wrap: wrap;
 }
 
-h2 {
-    padding-top: 3rem;
-    margin-top: 0;
-    color: #ffffff;
+.descTitle {
+  padding-top: 3rem;
+  margin-top: 0;
+  color: #ffffff;
 }
 
 hr {
-    width: 15rem;
-    margin-left: 0;
+  width: 15rem;
+  margin-left: 0;
 }
 
-p {
-    font-size: 1.5rem;
-    padding: 1rem 3rem 1rem 0;
-    text-align: justify;
-    color: darkgray;
+.descP {
+  font-size: 1.5rem;
+  padding: 1rem 3rem 1rem 0;
+  text-align: justify;
+  color: darkgray;
 }
 
 .title:hover {
-	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* ----------------------------------------------
@@ -41,24 +41,41 @@ p {
  * animation slide-right
  * ----------------------------------------
  */
- @-webkit-keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(100px);
-              transform: translateX(100px);
-    }
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
-  @keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(100px);
-              transform: translateX(100px);
-    }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
-  
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    margin-left: 6rem;
+  }
+
+  .descP {
+    font-size: 1rem;
+  }
+
+  .descTitle{
+    font-size: 1.2rem;
+  }
+
+  hr {
+    width: 10rem;
+  }
+}

@@ -90,7 +90,7 @@ const Information = ({ coll, title }) => {
                   </svg>
                   </div>
                 </h3>
-                <p>{item.description}</p>
+                <p className="itDesc">{item.description}</p>
               </li>
             ))}
           </ul>

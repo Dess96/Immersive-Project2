@@ -20,10 +20,6 @@ h3 {
     color: #ff7eee;
 }
 
-h2 {
-    font-size: 2rem;
-}
-
 #Layer_1 {
     margin-bottom: 0.5rem;
 }
@@ -32,7 +28,7 @@ svg:hover {
     cursor: pointer;
 }
 
-p {
+.itDesc {
     color: #d3c2c7;
     font-size: 1.3rem;
     margin-top: 0;

@@ -5,10 +5,10 @@ const Description = ({title, description}) => {
   return (
     <div className="content">
       <div className="title">
-        <h2>{title}</h2>
+        <h2 className="descTitle">{title}</h2>
         <hr />
       </div>
-      <p>
+      <p className="descP">
         {description}
       </p>
     </div>
