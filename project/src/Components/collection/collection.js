@@ -4,7 +4,6 @@ import Text from "../text/text";
 import Options from "../../Components/options/options";
 import GetLocal from "../../Helper/getLocal";
 
-import { useHistory } from "react-router-dom";
 const emptyText = 'This collection is empty :(';
 
 const Collection = () => {

@@ -13,26 +13,28 @@ const Options = ({ collection, input }) => {
 
   const deleteCollection = (collection) => {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You are about to delete the whole collection',
-      icon: 'warning',
+      title: "Are you sure?",
+      text: "You are about to delete the whole collection",
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonText: 'Ok',
-      background: '#000',
-      customClass: 'swal-wide'
-   }).then((result) => {
-      if(result.value){
+      confirmButtonText: "Ok",
+      background: "#000",
+      customClass: "swal-wide",
+    }).then((result) => {
+      if (result.value) {
         localStorage.removeItem(collection);
         history.go(0);
-     }
-   })
+      }
+    });
   };
 
   return (
     <div className="optionsDiv">
       <List collection={collection} />
-      <span onClick={() => changeURL(input)}>More</span>
-      <span onClick={() => deleteCollection(input)}>Delete</span>
+      <div className="options">
+        <span onClick={() => changeURL(input)}>More</span>
+        <span onClick={() => deleteCollection(input)}>Delete</span>
+      </div>
     </div>
   );
 };

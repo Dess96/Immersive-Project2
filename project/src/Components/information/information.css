@@ -11,13 +11,13 @@ ul .descList li {
 }
 
 svg {
-    color: #ff7eee;
+    color: #C77DFF;
 }
 
 h3 {
     margin-bottom: 0rem;
-    font-size: 1.7rem;
-    color: #ff7eee;
+    font-size: 1.6rem;
+    color: #C77DFF;
 }
 
 #Layer_1 {
@@ -32,6 +32,16 @@ svg:hover {
     color: #d3c2c7;
     font-size: 1.3rem;
     margin-top: 0;
+}
+
+.descriptionLi {
+    padding: 0;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.infoP {
+    margin: 0;
 }
 
 @media only screen and (max-width: 600px) {

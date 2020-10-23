@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   return (
-    <div className="content">
+    <div className="content longDiv">
       <div className="title">
         <h2 className="descTitle">Search for similar content</h2>
         <hr />
@@ -36,7 +36,7 @@ const Search = () => {
       </div>
       {sim ? (
         <div className="contentDiv">
-          {sim.map((item) =>
+          {sim.map((item, index) =>
             item.Type !== "" ? (
               <Card
                 name={item.Name}
@@ -44,9 +44,10 @@ const Search = () => {
                 desc={item.wTeaser}
                 id={item.yID}
                 found={item.found}
+                key={item.yID}
               />
             ) : (
-              <div className="loadingDiv">
+              <div className="loadingDiv" key={index}>
               <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
               </div>
             )

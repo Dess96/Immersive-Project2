@@ -12,7 +12,7 @@ let arrS = GetLocal("show") !== null ? GetLocal("show") : [];
 const getImage = (type) => {
   switch (type) {
     case "music":
-      return <i className="fas pad fasCard fa-music"></i>;
+      return <i className="fas pad fasCard fa-play"></i>
     case "movie":
       return <i className="fas pad fasCard fa-film"></i>;
     case "show":

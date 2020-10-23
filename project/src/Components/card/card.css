@@ -4,7 +4,6 @@
 }
 
 .cardDiv {
-    background-color: #191919;
     color:darkgray;
     height: 10rem;
     display: flex;
@@ -15,10 +14,11 @@
     align-content: center;
     text-align: center;
     width: 10rem;
+    border: solid #C77DFF 1px;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
  
 
@@ -29,7 +29,7 @@
 
 .fa-bookmark {
     font-size: 1.5rem;
-    color: #d3c2c7;
+    color: #C77DFF;
 }
 
 .fa-bookmark:hover {
@@ -38,4 +38,24 @@
 
 .pad {
     padding-top: 0.5rem;
+}
+
+
+.fasCard {
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #C77DFF;
+}
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 21px rgba(199, 125, 255, .7),
+          0 0 51px rgba(199, 125, 255, .7),
+          0 0 111px rgba(199, 125, 255, .7);
+      }
+      to {
+        text-shadow:
+          0 0 16px rgba(199, 125, 255, .7),
+          0 0 31px rgba(199, 125, 255, .7),
+          0 0 71px rgba(199, 125, 255, .7);
+      }
 }

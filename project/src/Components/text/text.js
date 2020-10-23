@@ -3,8 +3,8 @@ import "./text.css";
 
 const Text = ({text}) => {
   return (
-    <div>
-      <span>{text}</span>
+    <div className="textDiv">
+      <span className="textSize">{text}</span>
     </div>
   );
 };
