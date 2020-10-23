@@ -1,0 +1,10 @@
+{
+  "id": 618,
+  "name": "Roberto Vargas",
+  "age": "23",
+  "country": "Costa Rica",
+  "music": ["Korn", "Slipknot", "Metallica"],
+  "movie": ["It", "Alien"],
+  "game": [],
+  "show": []
+}

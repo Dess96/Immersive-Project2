@@ -34,11 +34,20 @@ const Header = () => {
                 <span className="navText">Collections</span>
               </Link>
             </li>
+            <li className="navItem">
+              <i class="fas pad fa-moon"></i>
+              <Link to="/friends">
+                <span className="navText">Friends</span>
+              </Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
           <Route path="/music">
+            <Music />
+          </Route>
+          <Route path="/friends">
             <Music />
           </Route>
           <Route path="/movie">
