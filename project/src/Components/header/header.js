@@ -34,12 +34,6 @@ const Header = () => {
                 <span className="navText">Collections</span>
               </Link>
             </li>
-            <li className="navItem">
-              <i className="fas pad fa-moon"></i>
-              <Link to="/friends">
-                <span className="navText">Friends</span>
-              </Link>
-            </li>
           </ul>
         </nav>
 
@@ -61,9 +55,6 @@ const Header = () => {
           </Route>
           <Route path="/collections">
             <Collection />
-          </Route>
-          <Route path="/friends">
-            
           </Route>
           <Route exact path="/">
             <Home />
