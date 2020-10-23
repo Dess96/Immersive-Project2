@@ -35,11 +35,12 @@ const Information = ({ coll, title }) => {
       />
       {collection ? (
         <div className="content">
-          <ul>
+          <ul className="descList">
             {collection.map((item) => (
               <li className="descriptionLi">
                 <h3>
-                  {item.name}{" "}
+                  {item.name}
+                  <div className="svgDiv">
                   <svg
                     version="1.1"
                     id="Layer_1"
@@ -87,9 +88,9 @@ const Information = ({ coll, title }) => {
                     <g></g>
                     <g></g>
                   </svg>
+                  </div>
                 </h3>
-                <br />
-                {item.description}
+                <p>{item.description}</p>
               </li>
             ))}
           </ul>

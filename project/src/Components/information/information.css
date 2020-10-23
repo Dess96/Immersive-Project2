@@ -1,3 +1,39 @@
-h3, svg {
-    color: #b4b1b1;
+ul .descList li {
+    display: flex;
+    text-align: justify;
+}
+
+.svgDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+svg {
+    color: #ff7eee;
+}
+
+h3 {
+    margin-bottom: 0rem;
+    font-size: 1.7rem;
+    color: #ff7eee;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#Layer_1 {
+    margin-bottom: 0.5rem;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+p {
+    color: #d3c2c7;
+    font-size: 1.3rem;
+    margin-top: 0;
 }
