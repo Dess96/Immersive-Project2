@@ -30,7 +30,7 @@ const Search = () => {
         <input
           type="text"
           placeholder="Bands, movies, shows..."
-          onKeyDown={updateData}
+          onChange={updateData}
         />
         <button onClick={() => changeURL(inp)}>Search!</button>
       </div>

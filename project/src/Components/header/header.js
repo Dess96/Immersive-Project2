@@ -36,8 +36,8 @@ const Header = () => {
             </li>
             <li className="navItem">
               <i className="fas pad fa-moon"></i>
-              <Link to="/logout">
-                <span className="navText">Logout</span>
+              <Link to="/friends">
+                <span className="navText">Friends</span>
               </Link>
             </li>
           </ul>
@@ -62,7 +62,9 @@ const Header = () => {
           <Route path="/collections">
             <Collection />
           </Route>
-          <Route path="/logout"></Route>
+          <Route path="/friends">
+            
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
