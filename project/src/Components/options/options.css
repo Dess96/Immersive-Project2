@@ -21,6 +21,6 @@
 
 @media only screen and (max-width: 600px) {
     .options span {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 }
