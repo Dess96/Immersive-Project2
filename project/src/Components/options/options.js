@@ -30,7 +30,9 @@ const Options = ({ collection, input }) => {
 
   return (
     <div className="optionsDiv">
+      <div className="listDiv">
       <List collection={collection} />
+      </div>
       <div className="options">
         <span onClick={() => changeURL(input)}>More</span>
         <span onClick={() => deleteCollection(input)}>Delete</span>
