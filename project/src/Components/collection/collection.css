@@ -11,23 +11,8 @@
 }
 
 .colls h3 {
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #C77DFF;
     margin: 0.5rem;
-}
-@keyframes neonAnim {
-    from {
-        text-shadow:
-          0 0 21px rgba(199, 125, 255, .7),
-          0 0 51px rgba(199, 125, 255, .7),
-          0 0 111px rgba(199, 125, 255, .7);
-      }
-      to {
-        text-shadow:
-          0 0 16px rgba(199, 125, 255, .7),
-          0 0 31px rgba(199, 125, 255, .7),
-          0 0 71px rgba(199, 125, 255, .7);
-      }
 }
 
 @media only screen and (max-width: 600px) {

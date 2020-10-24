@@ -12,7 +12,7 @@ let arrS = GetLocal("show") !== null ? GetLocal("show") : [];
 const getImage = (type) => {
   switch (type) {
     case "music":
-      return <i className="fas pad fasCard fa-play"></i>
+      return <i className="fas pad fasCard fa-play"></i>;
     case "movie":
       return <i className="fas pad fasCard fa-film"></i>;
     case "show":
@@ -80,7 +80,7 @@ const addDelete = (name, desc, type, id) => {
 
 const Card = ({ name, type, desc, id, found }) => {
   return (
-    <div className="cardDiv">
+    <div className="cardDiv grow">
       <div className="savedDiv">
         {found ? (
           <i

@@ -14,8 +14,8 @@
     align-content: center;
     text-align: center;
     width: 10rem;
-    border: solid #C77DFF 1px;
-    background-color: #000000;
+    background-color: #1b1b1b;
+    box-shadow: 10px 10px 8px 0 rgba(0,0,0,0.5);
 }
 
 .cardTitle {
@@ -41,22 +41,26 @@
     padding-top: 0.5rem;
 }
 
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.05); }
+
+.grow:hover .fasCard { animation: neonAnim 2s alternate-reverse infinite;
+    color: #C77DFF;}
 
 .fasCard {
-    animation: neonAnim 2s alternate-reverse infinite;
-    color: #C77DFF;
+    
 }
 @keyframes neonAnim {
     from {
         text-shadow:
-          0 0 21px rgba(199, 125, 255, .7),
-          0 0 51px rgba(199, 125, 255, .7),
-          0 0 111px rgba(199, 125, 255, .7);
+          0 0 12px rgba(199, 125, 255, .7),
+          0 0 42px rgba(199, 125, 255, .7),
+          0 0 102px rgba(199, 125, 255, .7);
       }
       to {
         text-shadow:
-          0 0 16px rgba(199, 125, 255, .7),
-          0 0 31px rgba(199, 125, 255, .7),
-          0 0 71px rgba(199, 125, 255, .7);
+          0 0 7px rgba(199, 125, 255, .7),
+          0 0 22px rgba(199, 125, 255, .7),
+          0 0 62px rgba(199, 125, 255, .7);
       }
 }

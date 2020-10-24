@@ -37,8 +37,8 @@ const Information = ({ coll, title }) => {
       {collection ? (
         <div className="content">
           <ul className="descList">
-            {collection.map((item) => (
-              <li className="descriptionLi">
+            {collection.map((item, index) => (
+              <li className="descriptionLi" key={index}>
                 <h3>
                   {item.name}
                   </h3>

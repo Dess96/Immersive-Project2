@@ -23,7 +23,7 @@ const Search = () => {
   return (
     <div className="content longDiv">
       <div className="title">
-        <h2 className="descTitle">Search for similar content</h2>
+        <h2 className="descTitle">Search</h2>
         <hr />
       </div>
       <div className="inputDiv">
