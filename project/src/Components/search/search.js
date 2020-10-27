@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GetSimilar from "../../Hooks/getSimilar";
 import Card from "../card/card";
 import "./search.css";
+import Swal from "sweetalert2";
 
 import { useHistory, useParams } from "react-router-dom";
 
@@ -16,8 +17,23 @@ const Search = () => {
   };
 
   const changeURL = (inp) => {
-    history.push(`/search/${inp}`);
-    history.go(0);
+    if (inp === "") {
+      Swal.fire({
+        title: "Invalid Search",
+        text: "Please use a valid search term.",
+        icon: "warning",
+        confirmButtonText: "Ok",
+        background: "#000",
+        customClass: "swal-wide",
+      }).then((result) => {
+        if (result.value) {
+          history.go(0);
+        }
+      });
+    } else {
+      history.push(`/search/${inp}`);
+      history.go(0);
+    }
   };
 
   return (
@@ -48,7 +64,12 @@ const Search = () => {
               />
             ) : (
               <div className="loadingDiv" key={index}>
-              <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
+                <div className="lds-roller">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </div>
             )
           )}
