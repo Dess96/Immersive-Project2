@@ -1,0 +1,92 @@
+{
+  "Similar": {
+    "Info": [
+      {
+        "Name": "The Beatles",
+        "Type": "music"
+      }
+    ],
+    "Results": [
+      {
+        "Name": "The Rolling Stones",
+        "Type": "music"
+      },
+      {
+        "Name": "Radiohead",
+        "Type": "music"
+      },
+      {
+        "Name": "Pink Floyd",
+        "Type": "music"
+      },
+      {
+        "Name": "Bob Dylan",
+        "Type": "music"
+      },
+      {
+        "Name": "Led Zeppelin",
+        "Type": "music"
+      },
+      {
+        "Name": "Jimi Hendrix",
+        "Type": "music"
+      },
+      {
+        "Name": "The Who",
+        "Type": "music"
+      },
+      {
+        "Name": "The Doors",
+        "Type": "music"
+      },
+      {
+        "Name": "Queen",
+        "Type": "music"
+      },
+      {
+        "Name": "John Lennon",
+        "Type": "music"
+      },
+      {
+        "Name": "David Bowie",
+        "Type": "music"
+      },
+      {
+        "Name": "Beck",
+        "Type": "music"
+      },
+      {
+        "Name": "U2",
+        "Type": "music"
+      },
+      {
+        "Name": "Red Hot Chili Peppers",
+        "Type": "music"
+      },
+      {
+        "Name": "Eric Clapton",
+        "Type": "music"
+      },
+      {
+        "Name": "R.E.M.",
+        "Type": "music"
+      },
+      {
+        "Name": "The White Stripes",
+        "Type": "music"
+      },
+      {
+        "Name": "The Velvet Underground",
+        "Type": "music"
+      },
+      {
+        "Name": "Michael Jackson",
+        "Type": "music"
+      },
+      {
+        "Name": "The Beach Boys",
+        "Type": "music"
+      }
+    ]
+  }
+}

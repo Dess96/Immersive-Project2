@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import GetLocal from "../Helper/getLocal";
+import Data from "../Data/test.json";
 let local = [];
+const getData = (list) => list['Similar'].Results;
 
 const GetSimilar = (search) => {
   const [sug, setSug] = useState([{ Name: "", Type: "" }]);
@@ -26,6 +28,8 @@ const GetSimilar = (search) => {
       })
       .catch((ex) => {
         console.error(ex);
+        console.log(getData(Data));
+        setSug(getData(Data));
       });
   }, [search]);
   return sug;
